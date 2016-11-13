@@ -1,0 +1,52 @@
+
+/* This is a program that will ask you your name. Once you enter your name it will say hello to you. */
+
+import java.util.Scanner;
+
+public class WhatsYourName {
+
+//String to input first name and last name
+
+public static void main(String[] args) {
+
+   String firstName, lastName;
+
+      Scanner Input = new Scanner(System.in);
+
+      System.out.print("Please Enter Your First name: ");
+         firstName = Input.nextLine();
+
+      System.out.print("Please Enter Your Last name: ");
+         lastName = Input.nextLine();
+
+//Line to concatenate names will state "Hello, Your Name"
+
+      System.out.print("Hello, " + firstName + " " + lastName);
+         System.out.println();
+
+
+//New scanner to ask if your name is correct
+
+ Scanner Question = new Scanner(System.in);
+            do{
+                  System.out.println("Is this Information Correct?");
+                  String a = Question.next();
+                  
+                  //This line sends you out to "Let's Keep Going"
+                   if(a.equalsIgnoreCase("yes"))
+                     break;
+             
+        
+                  //This line repeats the loop, so you go back to "Is this information correct?"
+                     else if(a.equalsIgnoreCase("no"))
+                     System.out.println("Oh No, you'll have to exit and restart :(!");
+          
+         
+                     } while (true);
+            
+System.out.println("Let's Keep Going!");            
+            
+            
+
+}}
+
